@@ -1,10 +1,13 @@
 import { Component } from '@angular/core';
+import { PoolConnectionService } from './pools/pool-connection.service';
 
 @Component({
-  selector: 'app-root',
+  selector : 'app-root',
+  styleUrls: ['./app.component.css'],
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  providers: [PoolConnectionService]
 })
 export class AppComponent {
-  title = 'app';
+  title = 'Hashboard 0.0'
+  constructor(public poolService: PoolConnectionService) { }
 }
